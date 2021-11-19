@@ -1,0 +1,45 @@
+
+
+{
+    "grocery":[
+                {"SLNO": "1", "ITEMNAME": "Rice",
+            "QUANTITY": "5", "UNIT": "Kg", "DEPARTMENT": "Grains", "NOTES": "Matta rice"
+        },
+
+        {"SLNO": "2", "ITEMNAME": "Wheat Flour",
+            "QUANTITY": "1", "UNIT": "Kg", "DEPARTMENT": "Flour", "NOTES": "Atta"
+        },
+
+        {"SLNO": "3", "ITEMNAME": "Coconut Oil",
+            "QUANTITY": "1", "UNIT": "Litre", "DEPARTMENT": "Oil", "NOTES": "Kera Brand"
+        },
+
+        {"SLNO": "4", "ITEMNAME": "Salt",
+            "QUANTITY": "1", "UNIT": "Kg", "DEPARTMENT": "Condiments", "NOTES": "Premium Salt"
+        },
+
+        {"SLNO": "5", "ITEMNAME": "Sugar",
+            "QUANTITY": "2", "UNIT": "Kg","DEPARTMENT": "Condiments", "NOTES": "Premium Sugar"
+        },
+
+        {"SLNO": "6", "ITEMNAME": "Coffee Powder",
+            "QUANTITY": "500", "UNIT": "gm", "DEPARTMENT": "Beverages", "NOTES": "Instant Coffee"
+        },
+
+        {"SLNO": "7", "ITEMNAME": "Bread ",
+            "QUANTITY": "1", "UNIT": "Packet", "DEPARTMENT": "Bakery", "NOTES": "Other"
+        },
+
+        {"SLNO": "8", "ITEMNAME": "Onion",
+            "QUANTITY": "1", "UNIT": "Kg", "DEPARTMENT": "Vegetables", "NOTES": "Fresh"
+        },
+
+        {"SLNO": "9", "ITEMNAME": "Tomato",
+            "QUANTITY": "1", "UNIT": "Kg", "DEPARTMENT": "Vegetables", "NOTES": "Fresh"
+        },
+
+        {"SLNO": "10", "ITEMNAME": "Potato",
+            "QUANTITY": "1", "UNIT": "Kg", "DEPARTMENT": "Vegetables", "NOTES": "Fresh"
+        }
+    ]
+}

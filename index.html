@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>GROCERY</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</head>
+
+<body style="background-image: url(./store\ grocery.webp); background-repeat: no-repeat; background-size: cover;">
+
+    <h1>GROCERY LIST</h1>
+    <button id="btn"  type="button" class="btn btn-primary" onclick="ajax()">VIEW</button> 
+    
+    <div class="container" style="margin-top: 1em;width: 100%;">
+        
+            <table >
+             <thead>
+                <tr class="table-warning">
+                  <th>SL NO</th>
+            <th>NAME</th>
+            <th>QUANTITY</th>
+            <th>UNIT</th>
+            <th>DEPARTMENT</th>
+            <th>NOTES</th>
+                </tr>
+              </thead>
+              <tbody id="protb">
+                
+              </tbody>
+            </table>
+          </div>
+          
+   
+    <script>
+      function ajax() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var response = JSON.parse(this.responseText);
+            var Jpeople = response.grocery;
+            var output="";
+
+            for (var i=0; i<Jpeople.length; i++) {
+                
+                output += "<tr><td>"+ Jpeople[i].SLNO + "</td><td>"+ Jpeople[i].ITEMNAME + "</td><td>"+ Jpeople[i].QUANTITY +  "</td><td>"+ Jpeople[i].UNIT +  "</td><td>"+ Jpeople[i].DEPARTMENT +  "</td><td>"+ Jpeople[i].NOTES + "</td></tr>";
+                
+
+                // var cell1 = row.insertCell(0);
+                // var cell2 = row.insertCell(1);
+                // var cell3 = row.insertCell(2);
+                // var cell4 = row.insertCell(3);
+                // var cell5 = row.insertCell(4);
+                // var cell6 = row.insertCell(5);
+
+
+                
+                // cell1.innerHTML = j[i].SL.NO;
+                // cell2.innerHTML = j[i].NAME;
+                // cell3.innerHTML = j[i].QUANTITY;
+                // cell4.innerHTML = j[i].UNIT;
+                // cell5.innerHTML = j[i].DEPARTMENT;
+                // cell6.innerHTML = j[i].NOTES;
+            }
+ document.getElementById("protb").innerHTML= output;
+
+        }
+      }
+    
+    xhttp.open("GET", "grocery.json", true);
+    xhttp.send();
+
+}
+    </script>
+    
+</body>
+</html>
